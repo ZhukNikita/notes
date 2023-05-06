@@ -1,0 +1,14 @@
+.search{
+  margin-right: 20px;
+  outline: none;
+  border:1px solid lightgray;
+  height: 25px;
+  border-radius: 6px;
+  font-size: 15px;
+  text-align: center;
+
+}
+::placeholder{
+  text-align: center;
+  font-size: 15px;
+}

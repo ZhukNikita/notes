@@ -1,0 +1,16 @@
+@mixin flex($align, $justify){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+.App{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    .body{
+        @include flex(center,start);
+        height: calc(100vh - 60px);
+        width: 100vw;
+    }
+}
