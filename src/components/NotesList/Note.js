@@ -23,7 +23,7 @@ export const Note = ({setIsCurrentNote , isCurrentNote ,el , isOpenMobileNote , 
     return (
         <div onClick={onClick} className={styles.note} style ={isCurrentNote===el.id?{backgroundColor:'lightgrey'}:{}}>
             {!isNameEdit && <h2 className={styles.desktopSize} onClick={()=>setIsNameEdit(true)}>{el.name.length > 12 ? el.name.slice(0,12) + '...' : el.name || 'Default Name'}</h2>}
-            {!isNameEdit && <h2 className={styles.mobileSize} onClick={()=>setIsNameEdit(true)}>{el.name.length > 30 ? el.name.slice(0,30) + '...' : el.name || 'Default Name'}</h2>}
+            {!isNameEdit && <h2 className={styles.mobileSize} onClick={()=>setIsNameEdit(true)}>{el.name.length > 23 ? el.name.slice(0,23) + '...' : el.name || 'Default Name'}</h2>}
             {isNameEdit && <input
                 onBlur={()=>BlurHandle(el.id)}
                 onKeyDown={(e )=> onKeyDown(e , el.id)}
@@ -35,6 +35,7 @@ export const Note = ({setIsCurrentNote , isCurrentNote ,el , isOpenMobileNote , 
                 }}
                 autoFocus={true}
             />}
+            <p style={{fontSize:'10px' , marginTop:'3px', marginBottom:'3px'}}>(click on the name to rename note)</p>
             <p>{moment(new Date(el.date)).format("MMM Do YY")}</p>
         </div>
     )
