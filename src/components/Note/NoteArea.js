@@ -21,6 +21,7 @@ export const NoteArea = ({note, ChangeTextNote }) => {
                         cols="30"
                         rows="10"
                         value={note?.text}
+                        placeholder={'Your Text'}
                     >
                         {note?.text}
                     </textarea>
@@ -30,6 +31,8 @@ export const NoteArea = ({note, ChangeTextNote }) => {
                         cols="30"
                         rows="10"
                         value={note?.text}
+                        placeholder={'Your Text'}
+
                     >
                         {note?.text}
                     </textarea>
