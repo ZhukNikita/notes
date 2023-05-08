@@ -1,3 +1,21 @@
 .body{
-  flex-grow: 1;
+  width: 20%;
+  height: calc(100vh - 60px);
+  border-right: 1px dashed lightgray;
+  margin: 0;
+  padding: 0;
+  .note{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 20px;
+    h2{
+      margin-bottom: 5px;
+    }
+    p{
+      margin-top: 5px;
+    }
+  }
 }

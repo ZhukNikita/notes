@@ -4,6 +4,7 @@
     justify-content: $justify;
 }
 .App{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -12,5 +13,9 @@
         @include flex(center,start);
         height: calc(100vh - 60px);
         width: 100vw;
+    }
+    .textAreaBlock{
+            flex-grow: 4;
+            height: calc(100vh - 60px);
     }
 }
