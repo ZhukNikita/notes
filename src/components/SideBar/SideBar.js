@@ -4,9 +4,11 @@ import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import {SearchBox} from "./SearchBox";
 import EditOffIcon from '@mui/icons-material/EditOff';
-export const SideBar = ({AddNewNote , setIsDeleteModalOpen , isCurrentNote , setIsEditable , isEditable}) => {
-
-  return(
+import {useContext} from "react";
+import {Context} from "../../App";
+export const SideBar = ({AddNewNote}) => {
+    const { isCurrentNote , isEditable , setIsEditable , setIsDeleteModalOpen} = useContext(Context);
+    return(
       <div className={styles.body}>
           <div className={styles.buttons}>
               <button onClick={AddNewNote}><AddIcon sx={{color:'black'}}/></button>

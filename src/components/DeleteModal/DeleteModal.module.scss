@@ -1,24 +1,39 @@
-.deleteModal{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  background-color: white;
-  width: 30vw;
-  height: 170px;
-  box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
-  border-radius: 8px;
-  text-align: center;
-  button{
-    width: 80px;
-    margin-right: 10px;
-    margin-left: 10px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    height: 30px;
-    border: 1px solid grey;
-    border-radius: 4px;
+@mixin flex($align, $justify){
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+@media (min-width: 375px) {
+  .deleteModal{
+    @include flex(center,center);
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: white;
+    width: 80vw;
+    height: 170px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
+    border-radius: 8px;
+    text-align: center;
+    button{
+      width: 80px;
+      margin-right: 10px;
+      margin-left: 10px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: bold;
+      height: 30px;
+      border: 1px solid grey;
+      border-radius: 4px;
+    }
+  }
+}
+@media (min-width: 600px) {
+  .deleteModal{
+    width: 50vw;
+
   }
 }

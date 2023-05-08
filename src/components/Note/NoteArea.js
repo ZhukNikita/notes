@@ -1,13 +1,16 @@
 import styles from './Note.module.scss'
-import {useState} from "react";
+import {useContext, useEffect, useState} from "react";
+import {Context} from "../../App";
 
-export const NoteArea = ({note , isEditable }) => {
-    const [text , setText] = useState('')
+export const NoteArea = ({note, ChangeTextNote }) => {
+    const [text , setText] = useState( '')
+    const {isEditable} = useContext(Context);
+
     function textHandler(e) {
         setText(e.target.value)
-        note.text = e.target.value
-    }
+        ChangeTextNote(e.target.value)
 
+    }
     return (
         <div className={styles.body}>
             {

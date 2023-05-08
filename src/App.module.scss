@@ -3,19 +3,42 @@
     align-items: $align;
     justify-content: $justify;
 }
-.App{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-direction: column;
-    .body{
-        @include flex(center,start);
-        height: calc(100vh - 60px);
-        width: 100vw;
+
+@media (min-width: 375px) {
+    .App{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        width: 100%;
+        .body{
+            height: calc(100vh - 60px);
+            width: 100vw;
+        }
+        .textAreaBlock{
+            display: none;
+        }
     }
-    .textAreaBlock{
+}
+
+@media (min-width: 600px) {
+    .App{
+
+        .body{
+            @include flex(center,start);
+            height: calc(100vh - 60px);
+            width: 100vw;
+        }
+        .textAreaBlock{
+            display: block;
+            text-align: center;
             flex-grow: 4;
             height: calc(100vh - 60px);
+            p{
+                color: lightgray;
+                margin: 0;
+            }
+        }
     }
 }

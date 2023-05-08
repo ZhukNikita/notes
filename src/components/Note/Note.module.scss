@@ -1,16 +1,39 @@
-.body{
-
-  textarea{
-    padding: 20px 20px;
-    font-size: 16px;
-    border: none;
-    width: 94%;
-    height: calc(100vh - 120px);
-    outline: none;
+@mixin flex($align, $justify){
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+@media (min-width: 375px) {
+  .body{
+    @include flex(start,center);
+    height: 350px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    textarea{
+      padding: 20px 20px;
+      overflow-y: auto;
+      font-size: 16px;
+      border: none;
+      width: 94%;
+      height: 300px;
+      outline: none;
+    }
+    textarea:disabled{
+      background-color: white;
+    }
   }
-  p{
-    margin: 0;
-    padding: 20px 20px;
-    max-width: 900px;
+}
+
+@media (min-width: 600px) {
+  .body{
+    @include flex(start,center);
+    height: calc(100vh - 85px);
+    width: 100%;
+    border: none;
+
+    textarea{
+      height: calc(100vh - 150px);
+    }
+
   }
 }
