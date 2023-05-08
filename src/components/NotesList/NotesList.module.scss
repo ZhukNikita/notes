@@ -17,6 +17,7 @@
       padding-left: 20px;
       .desktopSize{
         display: none;
+
       }
       .mobileSize{
         display: block;
@@ -50,6 +51,8 @@
     .note{
       .desktopSize{
         display: block;
+        margin-bottom: 5px;
+
       }
       .mobileSize{
         display: none;
